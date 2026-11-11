@@ -10,8 +10,8 @@ TTVoucher stores station profile data only. A valid deletion request may include
 
 To request deletion of station data, contact TTVoucher using one of the methods below:
 
-- Email: support@ttvoucher.com
-- Phone: +1 (555) 010-1234
+- Email: jsam82024820@gmail.com
+- Phone: +95 9349843932
 
 Please include enough information for us to identify the station profile, such as the station name or station ID. We may request additional information to confirm that you are authorized to request deletion of the station profile.
 
