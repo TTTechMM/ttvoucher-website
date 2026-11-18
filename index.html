@@ -27,12 +27,13 @@
       <section class="download-card" id="download" aria-labelledby="download-title">
         <div class="download-info">
           <h2 id="download-title">Download TT Voucher</h2>
-          <p class="download-meta">Version 1.0.0 &middot; APK &middot; 17.8 MB</p>
+          <p class="download-meta">Version 1.0.1 &middot; APK &middot; <span id="apk-size">…</span></p>
         </div>
         <a
+          id="apk-download"
           class="button primary download-button"
-          href="./assets/apks/ttvoucher-v1-0-0.apk"
-          download="ttvoucher-v1-0-0.apk"
+          href="./assets/apks/ttvoucher-v1-0-1.apk"
+          download="ttvoucher-v1-0-1.apk"
           type="application/vnd.android.package-archive"
         >
           <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
@@ -155,5 +156,20 @@
         <a href="./terms-and-conditions/index.html">Terms &amp; Conditions</a>
       </nav>
     </footer>
+    <script>
+      (function () {
+        var link = document.getElementById("apk-download");
+        var sizeEl = document.getElementById("apk-size");
+        if (!link || !sizeEl || !window.fetch) return;
+        fetch(link.href, { method: "HEAD" })
+          .then(function (res) {
+            var bytes = Number(res.headers.get("Content-Length"));
+            if (res.ok && bytes > 0) {
+              sizeEl.textContent = (bytes / 1024 / 1024).toFixed(1) + " MB";
+            }
+          })
+          .catch(function () {});
+      })();
+    </script>
   </body>
 </html>
