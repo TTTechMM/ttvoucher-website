@@ -210,6 +210,56 @@ a:hover {
   color: var(--muted);
 }
 
+.download-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 24px 0 0;
+  padding: 28px 32px;
+  background: linear-gradient(135deg, #ffffff 0%, #e6f4ed 100%);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.download-logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.download-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.download-info h2 {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+}
+
+.download-meta {
+  margin: 0 0 8px;
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.download-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.download-button {
+  gap: 8px;
+  padding: 14px 24px;
+  font-size: 1.05rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .legal-layout {
   padding-bottom: 40px;
 }
@@ -282,5 +332,15 @@ a:hover {
   .hero-card h1,
   .legal-card h1 {
     font-size: 2rem;
+  }
+
+  .download-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+
+  .download-button {
+    width: 100%;
   }
 }
